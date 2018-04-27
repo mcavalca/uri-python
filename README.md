@@ -1,2 +1,2 @@
 ﻿# uri-python
-Test me
+Repository to store URI online judge python solutions.
