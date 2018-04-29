@@ -1,7 +1,6 @@
-j = 0
 while True:
     n = input()
-    if int(n) < 0:
+    if n[0] == '-':
         break
     if('0x' in n):
         r = int(n[2:len(n)], 16)
