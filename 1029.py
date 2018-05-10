@@ -1,20 +1,11 @@
-tot = 0
-
-def fibo(f):
-    global tot
-    tot += 1
-    if(f == 0):
-        return 0
-    elif(f == 1):
-        return 1
-    else:
-        f = fibo(f-1) + fibo(f-2)
-    return f
+call = [1, 1]
+f = [0, 1]
+for i in range(2, 41):
+    call.append(call[i-1] + call[i-2] + 1)
+    f.append(f[i-1] + f[i-2])
     
 t = int(input())
 while(t > 0):
-    tot = -1
     n = int(input())
-    f = fibo(n)
-    print("fib(%d) = %d calls = %d" %(n, f[tot], f[i]))
+    print("fib(%d) = %d calls = %d" %(n, call[n]-1, f[n]))
     t -= 1

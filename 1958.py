@@ -1,10 +1,6 @@
+from decimal import Decimal
 a = input()
-b = ''
-if(a[0] == '-'):
-    b += '-'
-else:
-    b += '+'
+if Decimal(a) >= 0 and a[0] != '-':
+    print('+', end='')
     
-
-    
-print(b)
+print('%.4E' % Decimal(a))
