@@ -1,9 +1,10 @@
 while True:
     n = input()
-    if n[0] == '-':
+    if n == '-1':
         break
-    if('0x' in n):
-        r = int(n[2:len(n)], 16)
+    if n.isdigit():
+        n = hex(int(n))
+        n = n[:2] + n[2:].upper()
     else:
-        r = hex(int(n))
-    print(r)
+        n = int(n, 16)
+    print(n)

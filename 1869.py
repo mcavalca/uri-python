@@ -4,12 +4,10 @@ for i in range(32):
         b.append(i)
     else:
         b.append(chr(i+55))
-    
+
 while(True):
-    ans = ''
     n = int(input())
-    if(n == 0):
-        break
+    ans = ''
     while(n > 31):
         i = int(n%32)
         ans += str(b[i])
@@ -17,3 +15,5 @@ while(True):
     ans += str(b[int(n)])
     ans = ans[::-1]
     print(ans)
+    if(n == 0):
+        break

@@ -3,12 +3,13 @@ while True:
     if n == '0' and d == '0':
         break
     l = []
+    s = 'no'
+    jantar = [0] * int(n)
     for i in range(int(d)):
         l.append([int(x) for x in input().split()])
-    s = 'no'
-    for j in range(int(n)):
-        print(l[:][j], end = ' ')
-        if all(l[j][:]) and l[j][:] == 1:
-            s = 'yes'
-            break
+        for j in range(int(n)):
+            if l[i][j] == 1:
+                jantar[j] += 1
+    if jantar.count(int(d)) > 0:
+        s = 'yes'
     print(s)

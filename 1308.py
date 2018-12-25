@@ -1,10 +1,8 @@
-import math
+from math import sqrt
 n = int(input())
-while n > 0:
+
+while n:
     n -= 1
     m = int(input())
-    if(n%2 == 0):
-        i = int((-1+math.sqrt(4+8*m))/2)
-    else:
-        i = int((-1+math.sqrt(13+8*m))/2)
-    print(i)
+    m = int((sqrt(1 + 8*m) - 1) / 2)
+    print(m)

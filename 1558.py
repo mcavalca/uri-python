@@ -1,26 +1,21 @@
-import math
-    
+from math import sqrt
+quad = [0] * 11001
+for i in range(int(sqrt(11000)) + 1):
+    for j in range(i, int(sqrt(11000)) + 1):
+        if(i * i + j * j) > 11000:
+            break
+        quad[i*i + j*j] = 1
+
 while True:
     try:
         n = int(input())
-        s = 'NO'
-        x = 0
-        '''
-        if n > 0:
-            x = int(math.sqrt(n))+1
-        '''
-        if n < 3:
-            s = 'YES'
-        elif n % 4 == 1:
-            s = 'YES'
-        '''
-        for i in range(0, x):
-            for j in range(0, int(math.sqrt(n-x+1))+1):
-                if n == i**2 + j**2:
-                    s = 'YES'
-                    break
-        '''
-        print(s)
-        
+        if n < 0:
+            print('NO')
+        else:
+            if quad[n]:
+                print('YES')
+            else:
+                print('NO')
+
     except EOFError:
         break
