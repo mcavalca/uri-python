@@ -1,7 +1,4 @@
-nota = input().split()
+nota = [float(x) for x in input().split()]
 nota.sort()
-final = 0
-for x in nota:
-    final += float(x)
-final -= float(nota[0]) + float(nota[4])
+final = sum(nota) - nota[0] - nota[-1]
 print("%.1f" % final)

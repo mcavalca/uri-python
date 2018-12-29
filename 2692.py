@@ -1,14 +1,15 @@
-key = 'abcdefghijklmnopqrstuvxwyz'
-cor = 'abcdefghijklmnopqrstuvxwyz'
-n, m = input().split()
-for i in range(int(n)):
+n, m = [int(x) for x in input().split()]
+troc_e = troc_s = []
+
+while n:
+    n -= 1
     e, s = input().split()
-    key = key.replace(e, '1')
-    key = key.replace(s, '2')
-    key = key.replace('1', e)
-    key = key.replace('2', s)
-for i in range(int(m)):
-    c = input()
-    for j in range(len(c)):
-        c = c.replace(cor[cor.index(c[j])],key[key.index(c[j])])
-    print(c)
+    troc_e.append(e)
+    troc_s.append(s)
+
+while m:
+    m -= 1
+    palavra = input()
+    for i in range(len(palavra)):
+        if palavra[i] in troc_e:
+            palavra[i].replace()

@@ -1,12 +1,19 @@
+def mod(n):
+    saida = 0
+    tam = len(n)
+    for i in range(0, tam):
+        saida = (saida * 10 + int(n[i])) % 4
+    return saida
+
 t = int(input())
-while t > 0:
+while t:
     t -= 1
-    n = int(input()) % 4
+    n = mod(input())
     if n == 0:
         print(1)
     elif n == 1:
         print(7)
     elif n == 2:
         print(9)
-    elif n == 3:
+    else:
         print(3)
