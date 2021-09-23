@@ -4,7 +4,7 @@ while True:
         while m:
             m -= 1
             xi, yi = [int(i) for i in input().split()]
-            if (xi * yi <= x * y):
+             if (xi <= x and yi <= y) or (xi <= y and yi <= x):
                 print('Sim')
             else:
                 print('Nao')
