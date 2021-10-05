@@ -10,8 +10,7 @@ while True:
         # ordenar o dicionario
         total = {k: v for k, v in sorted(total.items(), key=lambda x: x[1])}
         
-        for peca in total:
-            print(peca)
+        print(' '.join(total))
 
     except EOFError:
         break
