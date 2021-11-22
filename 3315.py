@@ -1,0 +1,12 @@
+f=[]
+a=list(map(int,input().split()))
+b=list(map(int,input().split()))
+c=list(map(int,input().split()))
+d=list(map(int,input().split()))
+f.append(sum(a))
+f.append(sum(b))
+f.append(sum(c))
+f.append(sum(d))
+maior=max(f)
+maiorbinario=bin(maior).replace("0b","")
+print(f"{maior} = {maiorbinario}")
